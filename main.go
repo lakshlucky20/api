@@ -58,7 +58,7 @@ func attackHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/attack", attackHandler)
+	http.HandleFunc("/api", attackHandler)
 	http.Handle("/", http.FileServer(http.Dir("./static"))) // serve index.html from static/
 
 	fmt.Println("Server started on http://localhost:8080")
